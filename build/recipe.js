@@ -164,6 +164,7 @@ var exports = {
             {
                 id: 'headJsBlock',
                 files: [
+                   'reload.js' 
                 ],
                 path: 'scripts/'
             },
@@ -192,13 +193,13 @@ var exports = {
                     // ,'router'
                     // ,'angular.js'
                     // ,'test.coffee'
-                    // "bower/jquery/dist/jquery.js"
+                    "bower/jquery/dist/jquery.js"
                     // "vendor/jquery-1.6.2.js"
                     // ,'bower/bootstrap/dist/js/bootstrap.js'
                     // ,"bower/modernizr/modernizr.js"
-                    // ,"bower/bacon/dist/Bacon.min.js"
+                    ,"bower/bacon/dist/Bacon.min.js"
                     // ,"bower/mori/mori.js"
-                    // ,"bower/logthis/logthis.js"
+                    ,"bower/logthis/logthis.js"
                     // ,"bower/ractive/ractive.js"
                     // ,"bower/vue/dist/vue.js"
                     //The following will be substitud with the list of required
@@ -222,8 +223,11 @@ var exports = {
                     //and bb-server needs to know a requested script is a module
                     //because it needs to denodify.wrap it.
                     // ,'modules/mymodule.nm.js'
+                    ,'vouchdb/vow.js',
+                    'vouchdb/vouchdb.js',
+                    'vouchdb/vouchdb_couch.js'
                     
-                    ['main.js']
+                    ,['main.js']
                     ,"start.js"
                     // ,'cape.js'
                     
@@ -298,7 +302,91 @@ var exports = {
                              ]
                }
              }
-            
+            ,{  
+               src: 'html/basicPage.html'
+               ,tagIdPostfix: '' //can be overridden per template
+               ,pathOut: ''
+               ,out: 'www/signup.html' //optional, relative to root
+               ,mapping: {
+                   head: ['title', 'meta',  'html/ieshim',//'skewer',
+                          // 'firebug',
+                          'headJsBlock',
+                          'linkBlock'
+                          ,'cachify'
+                         ],
+                  
+                   "body": ['html/signup.html', 'jsBlock'
+                             ]
+               }
+             }
+            ,{  
+               src: 'html/basicPage.html'
+               ,tagIdPostfix: '' //can be overridden per template
+               ,pathOut: ''
+               ,out: 'www/confirm.html' //optional, relative to root
+               ,mapping: {
+                   head: ['title', 'meta',  'html/ieshim',//'skewer',
+                          // 'firebug',
+                          'headJsBlock',
+                          'linkBlock'
+                          ,'cachify'
+                         ],
+                  
+                   "body": ['html/confirm.html', 'jsBlock'
+                             ]
+               }
+             }
+            ,{  
+               src: 'html/basicPage.html'
+               ,tagIdPostfix: '' //can be overridden per template
+               ,pathOut: ''
+               ,out: 'www/forgotpwd.html' //optional, relative to root
+               ,mapping: {
+                   head: ['title', 'meta',  'html/ieshim',//'skewer',
+                          // 'firebug',
+                          'headJsBlock',
+                          'linkBlock'
+                          ,'cachify'
+                         ],
+                  
+                   "body": ['html/forgotpwd.html', 'jsBlock'
+                             ]
+               }
+             }
+            ,{  
+               src: 'html/basicPage.html'
+               ,tagIdPostfix: '' //can be overridden per template
+               ,pathOut: ''
+               ,out: 'www/login.html' //optional, relative to root
+                ,mapping: {
+                    head: ['title', 'meta',  'html/ieshim',//'skewer',
+                           // 'firebug',
+                           'headJsBlock',
+                           'linkBlock'
+                           ,'cachify'
+                          ],
+                  
+                    "body": ['html/login.html', 'jsBlock'
+                            ]
+                }
+               }
+            ,{  
+               src: 'html/basicPage.html'
+               ,tagIdPostfix: '' //can be overridden per template
+               ,pathOut: ''
+               ,out: 'www/forgotpwd.html' //optional, relative to root
+                ,mapping: {
+                    head: ['title', 'meta',  'html/ieshim',//'skewer',
+                           // 'firebug',
+                           'headJsBlock',
+                           'linkBlock'
+                           ,'cachify'
+                          ],
+                  
+                    "body": ['html/forgotpwd.html', 'jsBlock'
+                            ]
+                }
+               }
         ] 
     }
 };

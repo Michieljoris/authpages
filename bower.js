@@ -99,7 +99,7 @@ module.exports = {
         // "arbor": "*",
         "jquery": "*"
         
-        // ,"bacon": "*"
+        ,"bacon": "*"
         // ,"mori": "*"
         // ,"bootstrap":"*"
        
