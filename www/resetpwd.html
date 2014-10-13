@@ -27,9 +27,34 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 
 <script type='text/javascript'>function cachify(path) { return path; }</script></head>
-  <body id="body"><div class='row' style='margin-left: 0; padding-left:10px; border:solid grey 1px; height:40; width:100%;'>placeholder for html/resetpwd.html</div>
-<script type="text/javascript" src="/scripts/module2.js?module=0"></script>
-<script type="text/javascript" src="/scripts/main.js?module=1"></script>
+  <body id="body"><!--partial:html/resetpwd.html--><div class="container">
+  <div class="row">
+    <h2>Reset password</h2>
+
+    <div class="col-md-4">
+      <form role="form">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="password">Password again</label>
+          <input type="password" class="form-control" id="password2"
+		 placeholder="Password again">
+        </div>
+      </form>
+      <button id="resetpwd" type="submit" class="btn btn-info">Reset password</button>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/scripts/bower/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/scripts/bower/bacon/dist/Bacon.min.js"></script>
+<script type="text/javascript" src="/scripts/bower/logthis/logthis.js"></script>
+<script type="text/javascript" src="/scripts/vouchdb/vow.js"></script>
+<script type="text/javascript" src="/scripts/vouchdb/vouchdb.js"></script>
+<script type="text/javascript" src="/scripts/vouchdb/vouchdb_couch.js"></script>
+<script type="text/javascript" src="/scripts/main.js?module=0"></script>
 <script type="text/javascript" src="/scripts/start.js"></script>
 </body>
 </html>	

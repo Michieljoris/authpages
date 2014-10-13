@@ -272,92 +272,22 @@ var exports = {
                }
              }
             ,{  
-               src: 'html/basicPage.html'
-               ,tagIdPostfix: '' //can be overridden per template
-               ,pathOut: ''
-               ,out: 'www/index.html' //optional, relative to root
+                src: 'html/basicPage.html'
+                ,tagIdPostfix: '' //can be overridden per template
+                ,pathOut: ''
+                ,out: 'www/index.html' //optional, relative to root
                
-               //Maps tag ids to partial ids. Tag ids have to be
-               //postfixed with two dashes in the template. Partials
-               //with an extension will be loaded from the partials
-               //folder for this template. Markdown files will be
-               //converted to html. Partials in an array will be
-               //concatenated before inserted at the tag id element
+                //Maps tag ids to partial ids. Tag ids have to be
+                //postfixed with two dashes in the template. Partials
+                //with an extension will be loaded from the partials
+                //folder for this template. Markdown files will be
+                //converted to html. Partials in an array will be
+                //concatenated before inserted at the tag id element
                
-               //Make sure to have the cachify partial included in the head if
-               //you want to dynamically load resources from javascript, but
-               //want to retrieve cachified versions. Include the resources
-               //under cachify.list
-               ,mapping: {
-                   head: ['title', 'meta',  'html/ieshim',//'skewer',
-                          // 'firebug',
-                          'headJsBlock',
-                          'linkBlock'
-                          ,'cachify'
-                         ],
-                  
-                   "body": ['body', 'jsBlock'
-                            
-                              // ,'html/google_analytics.html'
-                             ]
-               }
-             }
-            ,{  
-               src: 'html/basicPage.html'
-               ,tagIdPostfix: '' //can be overridden per template
-               ,pathOut: ''
-               ,out: 'www/signup.html' //optional, relative to root
-               ,mapping: {
-                   head: ['title', 'meta',  'html/ieshim',//'skewer',
-                          // 'firebug',
-                          'headJsBlock',
-                          'linkBlock'
-                          ,'cachify'
-                         ],
-                  
-                   "body": ['html/signup.html', 'jsBlock'
-                             ]
-               }
-             }
-            ,{  
-               src: 'html/basicPage.html'
-               ,tagIdPostfix: '' //can be overridden per template
-               ,pathOut: ''
-               ,out: 'www/confirm.html' //optional, relative to root
-               ,mapping: {
-                   head: ['title', 'meta',  'html/ieshim',//'skewer',
-                          // 'firebug',
-                          'headJsBlock',
-                          'linkBlock'
-                          ,'cachify'
-                         ],
-                  
-                   "body": ['html/confirm.html', 'jsBlock'
-                             ]
-               }
-             }
-            ,{  
-               src: 'html/basicPage.html'
-               ,tagIdPostfix: '' //can be overridden per template
-               ,pathOut: ''
-               ,out: 'www/forgotpwd.html' //optional, relative to root
-               ,mapping: {
-                   head: ['title', 'meta',  'html/ieshim',//'skewer',
-                          // 'firebug',
-                          'headJsBlock',
-                          'linkBlock'
-                          ,'cachify'
-                         ],
-                  
-                   "body": ['html/forgotpwd.html', 'jsBlock'
-                             ]
-               }
-             }
-            ,{  
-               src: 'html/basicPage.html'
-               ,tagIdPostfix: '' //can be overridden per template
-               ,pathOut: ''
-               ,out: 'www/login.html' //optional, relative to root
+                //Make sure to have the cachify partial included in the head if
+                //you want to dynamically load resources from javascript, but
+                //want to retrieve cachified versions. Include the resources
+                //under cachify.list
                 ,mapping: {
                     head: ['title', 'meta',  'html/ieshim',//'skewer',
                            // 'firebug',
@@ -366,15 +296,51 @@ var exports = {
                            ,'cachify'
                           ],
                   
-                    "body": ['html/login.html', 'jsBlock'
+                    "body": ['body', 'jsBlock'
+                            
+                             // ,'html/google_analytics.html'
                             ]
                 }
-               }
+            }
             ,{  
-               src: 'html/basicPage.html'
-               ,tagIdPostfix: '' //can be overridden per template
-               ,pathOut: ''
-               ,out: 'www/forgotpwd.html' //optional, relative to root
+                src: 'html/basicPage.html'
+                ,tagIdPostfix: '' //can be overridden per template
+                ,pathOut: ''
+                ,out: 'www/signup.html' //optional, relative to root
+                ,mapping: {
+                    head: ['title', 'meta',  'html/ieshim',//'skewer',
+                           // 'firebug',
+                           'headJsBlock',
+                           'linkBlock'
+                           ,'cachify'
+                          ],
+                  
+                    "body": ['html/signup.html', 'jsBlock'
+                            ]
+                }
+            }
+            ,{  
+                src: 'html/basicPage.html'
+                ,tagIdPostfix: '' //can be overridden per template
+                ,pathOut: ''
+                ,out: 'www/confirm.html' //optional, relative to root
+                ,mapping: {
+                    head: ['title', 'meta',  'html/ieshim',//'skewer',
+                           // 'firebug',
+                           'headJsBlock',
+                           'linkBlock'
+                           ,'cachify'
+                          ],
+                  
+                    "body": ['html/confirm.html', 'jsBlock'
+                            ]
+                }
+            }
+            ,{  
+                src: 'html/basicPage.html'
+                ,tagIdPostfix: '' //can be overridden per template
+                ,pathOut: ''
+                ,out: 'www/forgotpwd.html' //optional, relative to root
                 ,mapping: {
                     head: ['title', 'meta',  'html/ieshim',//'skewer',
                            // 'firebug',
@@ -386,11 +352,41 @@ var exports = {
                     "body": ['html/forgotpwd.html', 'jsBlock'
                             ]
                 }
-               }
+            }
+            ,{  src: 'html/basicPage.html'
+                ,tagIdPostfix: '' //can be overridden per template
+                ,pathOut: ''
+                ,out: 'www/resetpwd.html' //optional, relative to root
+                ,mapping: {
+                    head: ['title', 'meta',  'html/ieshim',//'skewer',
+                           // 'firebug',
+                           'headJsBlock',
+                           'linkBlock'
+                           ,'cachify'
+                          ],
+                  
+                    "body": ['html/resetpwd.html', 'jsBlock'
+                            ]
+                }
+             }
+            ,{  
+                src: 'html/basicPage.html'
+                ,tagIdPostfix: '' //can be overridden per template
+                ,pathOut: ''
+                ,out: 'www/login.html' //optional, relative to root
+                ,mapping: {
+                    head: ['title', 'meta',  'html/ieshim',//'skewer',
+                           // 'firebug',
+                           'headJsBlock',
+                           'linkBlock'
+                           ,'cachify'
+                          ],
+                  
+                    "body": ['html/login.html', 'jsBlock'
+                            ]
+                }
+            }
         ] 
     }
 };
 
-
-//TODO update bootstrap
-//TODO use bower or something for vendor libs
