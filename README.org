@@ -111,7 +111,7 @@ What follows is a description of the various databases involved in the system.
  used and added to the signup to validate requests for signup. If the passwords
  don't match the requests are simply discarded.
  
-** forgot password 
+** Forgot password 
   
  This works similar to sign up. A client can send the following message:
  
@@ -157,6 +157,16 @@ When =cape= finds this uuid as a _id in =temp= it knows that the request to
   for the stored doc comes after a certain timeout. This invalidates any
   confirmation or reset password links clicked on after a certain time.
   
+  SSL should be enabled for any connection to CouchDB since passwords are sent
+  in cleartext over the net.
+  
+  As all other email verification methods the system is vulnerable to mtm
+  attacks that read emails in transit from server to client. Any tokens sent
+  are once only and expire quickly. This minimizes this threat somewhat, but I
+  still wonder why this is not a bigger security threat than it seems to
+  be. Google and Twitter and other big players very readily sent email
+  verification emails to registered or new users.
+  
 * Passwordless logins 
    
  The scheme can also be used to enable passwordless logins. A user submits their
@@ -190,7 +200,7 @@ The various relevant html fragments are in build/html and the relevant
 javascript file is in www/scripts/main.js. 
 
 * Cape
-=Cape= is larger project than just authenticating users through CouchDB. The
+=Cape= is a larger project than just authenticating users through CouchDB. The
 idea is to implement a system to build front end apps without a real backend
 other than a database. Apps are supposed to communicate directly and only with
 the database. Any work needing to be done on the server is done by cape which is
