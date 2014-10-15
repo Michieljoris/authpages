@@ -41,6 +41,7 @@ function listenForMsgs(from) {
     vouchdb.dbChanges(function(change) {
         change.results.forEach(function(result) {
             console.log('Received msg: ', result.doc.msg);
+            alert('Received msg: ', result.doc.msg);
         });
     }, 0, options, 'public');
     
