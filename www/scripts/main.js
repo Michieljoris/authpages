@@ -36,7 +36,7 @@ console.log('From key: ', from);
 function listenForMsgs(from) {
     console.log('listening for public messages..');
     var options =
-        from ? { include_docs: true, filter: 'cape/from', from:from } :
+        from ? { include_docs: true, filter: 'cape/to', to:from } :
     { inclue_docs: true };
     vouchdb.dbChanges(function(change) {
         change.results.forEach(function(result) {
