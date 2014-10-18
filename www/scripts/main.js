@@ -71,7 +71,7 @@ function makeUUID() {
 var cliks = $("#forgotpwd").asEventStream("click");
 cliks.onValue(function() {
     vouchdb.docSave({ msg:'forgotpwd',
-                      usernameOrPassword: $("#username")[0].value,
+                      usernameOrEmail: $("#username")[0].value,
                       from: from
                     }, 'reception')
         .when(
@@ -136,15 +136,20 @@ cliks.onValue(function() {
 });
 
 
+cliks = $("#test").asEventStream("click");
+cliks.onValue(function() {
+    console.log('Testing');
+    var res = httpGet('http://couch.local/temp/_all_docs?include_docs=true"');
+    console.log(res);
+    
+});
 
+function httpGet(theUrl)
+{
+    var xmlHttp = null;
 
-
-
-
-
-
-
-
-
-
-
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
